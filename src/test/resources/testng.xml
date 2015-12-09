@@ -4,6 +4,7 @@
     <test name="ABC" >
         <classes>
             <class name="SimpleTest" />
+            <class name="SimpleTest1" />
         </classes>
     </test>
 
