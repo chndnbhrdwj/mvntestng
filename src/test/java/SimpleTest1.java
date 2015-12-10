@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 /**
  * Created by chandan on 12/9/2015.
  */
-public class SimpleTest1 {
+public class SimpleTest1 extends SimpleTest {
 
     int a;
     int b;
@@ -18,19 +18,22 @@ public class SimpleTest1 {
 
     @Test
     public void test1(){
-        System.out.println(Thread.currentThread().getName());
+        driver.get("https://www.google.co.uk");
+        System.out.println(driver.getTitle());
         Assert.assertEquals(a + 1, b);
     }
 
     @Test
     public void test2(){
-        System.out.println(Thread.currentThread().getName());
+        driver.get("https://twitter.com/");
+        System.out.println(driver.getTitle());
         Assert.assertTrue(a < b);
     }
 
     @Test
     public void test3(){
-        System.out.println(Thread.currentThread().getName());
+        driver.get("https://www.instagram.com/");
+        System.out.println(driver.getTitle());
         Assert.assertTrue(a < b);
     }
 }
